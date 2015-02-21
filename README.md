@@ -12,3 +12,16 @@ RRTagController is a subClass of an UIViewController. It's very easy to customiz
   <img src ="https://raw.githubusercontent.com/remirobert/RRTagController/master/source/anim.gif"/>
 </p>
 </br>
+
+<h3 align="center">Usage</h3>
+only one line of code enough to use it : 
+```Swift
+let tag = ["Albanie", "Allemagne", "Andorre", "Autriche-Hongrie", "Belgique", "Bulgarie", "Danemark", "Espagne", "France", "Grèce", "Italie", "Liechtenstein", "Luxembourg", "Monaco", "Monténégro", "Norvège", "Pays-Bas", "Portugal", "Roumanie", "Royaume-Uni", "Russie", "Saint-Marin", "Serbie", "Suède", "Suisse"]
+        
+RRTagController.displayTagController(parentController: self, tagsString: tag,
+blockFinish: { (selectedTags, unSelectedTags) -> () in
+  // the user finished the selection and returns the separated list Selected and not selected.
+  }) { () -> () in
+  // here the user cancel the selection, nothing is returned.
+}
+```
